@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <title>iPhone Ultra</title>
+    <meta name="description" content="Forged in Titanium. Designed for the impossible." />
+    
+    <!-- Fonts: Bricolage Grotesque for impact, IBM Plex Mono for technical data -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200;400;600;800&family=IBM+Plex+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ['"Bricolage Grotesque"', 'sans-serif'],
+              mono: ['"IBM Plex Mono"', 'monospace'],
+            },
+            colors: {
+              titanium: {
+                50: '#f7f7f8',
+                100: '#ececed',
+                200: '#d4d4d8',
+                300: '#a1a1aa',
+                400: '#71717a',
+                500: '#52525b',
+                600: '#3f3f46',
+                700: '#27272a',
+                800: '#18181b',
+                900: '#09090b',
+                950: '#050505',
+              },
+              ultra: '#FF3B00', // Action Orange
+            },
+            backgroundImage: {
+              'metal-gradient': 'linear-gradient(135deg, #27272a 0%, #52525b 25%, #27272a 50%, #71717a 75%, #27272a 100%)',
+              'glass-gradient': 'linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #050505;
+        color: #f7f7f8;
+        overflow-x: hidden;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #09090b;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #3f3f46;
+        border-radius: 3px;
+      }
+      
+      .clip-diagonal {
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      }
+      
+      /* Metal Sheen Effect */
+      .metal-sheen {
+        background: linear-gradient(
+          90deg,
+          transparent 0%,
+          rgba(255, 255, 255, 0.05) 45%,
+          rgba(255, 255, 255, 0.3) 50%,
+          rgba(255, 255, 255, 0.05) 55%,
+          transparent 100%
+        );
+        background-size: 200% 100%;
+        animation: sheen 8s infinite linear;
+      }
+      
+      @keyframes sheen {
+        0% { background-position: 200% 0; }
+        100% { background-position: -200% 0; }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "gsap/": "https://esm.sh/gsap@^3.14.2/",
+    "gsap": "https://esm.sh/gsap@^3.14.2"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
